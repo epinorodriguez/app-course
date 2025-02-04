@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/eduardopino/Desktop/EventEase/a/EventEase/obj/Debug/net8.0/scopedcss/projectbundle/EventEase.bundle.scp.css",
+      "PackagePath": "staticwebassets/EventEase.mf7jtem34m.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/eduardopino/Desktop/EventEase/a/EventEase/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/eduardopino/Desktop/EventEase/a/EventEase/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/eduardopino/Desktop/EventEase/a/EventEase/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/eduardopino/Desktop/EventEase/a/EventEase/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.EventEase.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.EventEase.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.EventEase.props",
+      "PackagePath": "build\\EventEase.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.EventEase.props",
+      "PackagePath": "buildMultiTargeting\\EventEase.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.EventEase.props",
+      "PackagePath": "buildTransitive\\EventEase.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

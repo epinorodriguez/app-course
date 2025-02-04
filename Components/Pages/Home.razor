@@ -1,7 +1,36 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
+@using EventEase.Models
+@using EventEase.Services
 
-<PageTitle>Home</PageTitle>
+<h1>Upcoming Events</h1>
 
-<h1>Hello, world!</h1>
+<button class="btn" @onclick="NavigateToAddEvent">Add New Event</button>
 
-Welcome to your new app.
+@foreach (var eventItem in EventService.GetEvents())
+{
+    <EventCard EventId="@eventItem.Id" EventName="@eventItem.Name" EventDate="@eventItem.Date"
+        Location="@eventItem.Location" />
+}
+
+@code {
+    private void NavigateToAddEvent()
+    {
+        NavigationManager.NavigateTo("/add-event");
+    }
+}
+
+<style>
+    .btn {
+        margin: 10px 0;
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #218838;
+    }
+</style>

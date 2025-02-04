@@ -1,0 +1,83 @@
+@page "/add-event"
+@using EventEase.Models
+@using EventEase.Services
+@inject NavigationManager NavigationManager
+
+<h2>Add New Event</h2>
+
+<EditForm Model="newEvent" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Event Name:</label>
+        <InputText @bind-Value="newEvent.Name" class="form-control" required />
+    </div>
+
+    <div>
+        <label>Date:</label>
+        <InputDate @bind-Value="newEvent.Date" class="form-control" required />
+    </div>
+
+    <div>
+        <label>Location:</label>
+        <InputText @bind-Value="newEvent.Location" class="form-control" required />
+    </div>
+
+    <div>
+        <label>Description:</label>
+        <InputTextArea @bind-Value="newEvent.Description" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn">Add Event</button>
+</EditForm>
+
+@if (isSubmitted)
+{
+    <p class="success-message">Event added successfully!</p>
+    <button @onclick="NavigateToHome">Back to Events</button>
+}
+
+@code {
+    private EventModel newEvent = new EventModel();
+    private bool isSubmitted = false;
+
+    private void HandleValidSubmit()
+    {
+        EventService.AddEvent(newEvent); // Add the new event to the service
+        isSubmitted = true;
+    }
+
+    private void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}
+
+<style>
+    .form-control {
+        display: block;
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: #0078d4;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #005a9e;
+    }
+
+    .success-message {
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>

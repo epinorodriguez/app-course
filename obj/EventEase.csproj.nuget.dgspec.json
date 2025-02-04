@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eduardopino/Desktop/EventEase/EventEase/EventEase.csproj": {}
+    "/Users/eduardopino/Desktop/EventEase/a/EventEase/EventEase.csproj": {}
   },
   "projects": {
-    "/Users/eduardopino/Desktop/EventEase/EventEase/EventEase.csproj": {
+    "/Users/eduardopino/Desktop/EventEase/a/EventEase/EventEase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduardopino/Desktop/EventEase/EventEase/EventEase.csproj",
+        "projectUniqueName": "/Users/eduardopino/Desktop/EventEase/a/EventEase/EventEase.csproj",
         "projectName": "EventEase",
-        "projectPath": "/Users/eduardopino/Desktop/EventEase/EventEase/EventEase.csproj",
+        "projectPath": "/Users/eduardopino/Desktop/EventEase/a/EventEase/EventEase.csproj",
         "packagesPath": "/Users/eduardopino/.nuget/packages/",
-        "outputPath": "/Users/eduardopino/Desktop/EventEase/EventEase/obj/",
+        "outputPath": "/Users/eduardopino/Desktop/EventEase/a/EventEase/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/eduardopino/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +42,8 @@
         "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -55,6 +55,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

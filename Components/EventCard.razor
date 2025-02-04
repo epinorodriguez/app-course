@@ -1,18 +1,35 @@
-<div class="event-card">
-    <h3>@Name</h3>
-    <p>@Date.ToString("d")</p>
-    <p>@Location</p>
-</div>
-
+@inject NavigationManager NavigationManager
 
 @code {
-    [Parameter]
-    public string Name { get; set; }
+    [Parameter] public int EventId { get; set; }
+    [Parameter] public string EventName { get; set; } = "Sample Event";
+    [Parameter] public DateTime EventDate { get; set; } = DateTime.Now;
+    [Parameter] public string Location { get; set; } = "Unknown Location";
 
-    [Parameter]
-    public DateTime Date { get; set; }
-
-    [Parameter]
-    public string Location { get; set; }
+    private void NavigateToDetails()
+    {
+        NavigationManager.NavigateTo($"/event/{EventId}");
+    }
 }
 
+<div class="event-card" @onclick="NavigateToDetails" style="cursor: pointer;">
+    <h3>@EventName</h3>
+    <p>Date: @EventDate.ToShortDateString()</p>
+    <p>Location: @Location</p>
+</div>
+
+<style>
+    .event-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+    }
+
+    .event-card:hover {
+        transform: scale(1.02);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+</style>
