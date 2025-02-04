@@ -1,0 +1,26 @@
+@page "/events/{eventName}"
+@using EventEase.Models
+@inject NavigationManager Navigation
+@code {
+    [Parameter]
+    public string EventName { get; set; }
+
+    private Event eventDetails;
+
+    protected override void OnInitialized()
+    {
+        // Aquí deberías obtener los detalles del evento desde una fuente de datos
+        eventDetails = new Event { Name = EventName, Date = new DateTime(2023, 12, 25), Location = "Auditorio Nacional" };
+    }
+}
+
+<h3>Event Details</h3>
+
+@if (eventDetails != null)
+{
+    <EventCard EventDetails="eventDetails" />
+}
+else
+{
+    <p>Loading...</p>
+}

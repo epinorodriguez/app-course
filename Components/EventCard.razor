@@ -1,0 +1,18 @@
+<div class="event-card">
+    <h3>@Name</h3>
+    <p>@Date.ToString("d")</p>
+    <p>@Location</p>
+</div>
+
+
+@code {
+    [Parameter]
+    public string Name { get; set; }
+
+    [Parameter]
+    public DateTime Date { get; set; }
+
+    [Parameter]
+    public string Location { get; set; }
+}
+
